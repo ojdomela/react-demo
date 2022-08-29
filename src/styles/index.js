@@ -1,5 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
+export const colors = {
+    primary: "green",
+    secondary: "#fff",
+    tertiary: "#f5f5f5",
+    background: "#000",
+}
+
 export default createGlobalStyle`
     *, *::before, *::after {
         box-sizing: border-box;
@@ -7,15 +14,14 @@ export default createGlobalStyle`
 
     body {
         margin: 0;
+        padding-top: 5rem;
+        background-color: ${colors.background};
+        color: ${colors.secondary};
+        min-height: 100vh;
+        position: relative;
     }
 
     html {
         font-size: 62.5%;
     }
 `;
-
-export const colors = {
-    primary: "#f5f5f5",
-    secondary: "#f5f5f5",
-    tertiary: "#f5f5f5",
-}

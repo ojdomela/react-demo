@@ -1,7 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
+import { colors } from '../../styles'
 
 export default function Navbar() {
   return (
-    <div>Navbar</div>
+    <Container>
+      <div>Logo goes here</div>
+      <div>Nav links go here?</div>
+    </Container>
   )
 }
+
+const Container = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: ${colors.primary};
+`
