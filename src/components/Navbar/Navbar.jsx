@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../../styles'
+import { useSelector } from 'react-redux/es/exports'
 
 export default function Navbar() {
+  
+  const favorite = useSelector(state => state.student)
   return (
     <Container>
-      <div>Logo goes here</div>
+      <div>{favorite.name}</div>
       <div>Nav links go here?</div>
     </Container>
   )
