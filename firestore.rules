@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /comments/{document} {
+      function isSignedIn() {
+        return request.auth != null;
+      }
+
+      function isOwner(rsc) {
+        return isSignedIn() && request.auth.id == rsc.data.owner;
+      }
+
+      function isAuthorized() {
+        return isSignedIn() && request.auth.token.student;
+      }
+
+      allow read: if isSignedIn();
+      allow create: if isAuthorized();
+      allow delete: if isOwner(resource);
+      allow update: if isOwner(resource);
+    }
+  }
+}

@@ -1,15 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../../styles'
-import { useSelector } from 'react-redux/es/exports'
+import { useDispatch } from 'react-redux'
+import { toggleModal } from '../../utils/displayReducer'
+import { logout } from '../../utils/firebase'
 
 export default function Navbar() {
-  
-  const favorite = useSelector(state => state.student)
+  const dispatch = useDispatch()
+ 
   return (
     <Container>
-      <div>{favorite.name}</div>
-      <div>Nav links go here?</div>
+      <div onClick={() => logout()}>Logo goes here. It logs out for now.</div>
+      <div onClick={() => dispatch(toggleModal())}>Nav links go here? It toggles the modal for now</div>
     </Container>
   )
 }

@@ -1,14 +1,52 @@
 [
     {
-        "name": "Bart",
+        "name": "Headset",
+        "price": "100",
+        "description": "Headset for mobile phone",
+        "image": "some_image_url.png",
         "id": "1"
     },
     {
-        "name": "Lex",
+        "name": "Headset",
+        "price": "100",
+        "color": "red",
+        "description": "Headset for mobile phone",
+        "image": "some_image_url.png",
         "id": "2"
     },
     {
-        "name": "Sander",
+        "name": "Headset",
+        "price": "100",
+        "description": "Headset for mobile phone",
+        "image": "some_image_url.png",
         "id": "3"
+    },
+    {
+        "name": "Headset",
+        "price": "100",
+        "description": "Headset for mobile phone",
+        "image": "some_image_url.png",
+        "id": "4"
+    },
+    {
+        "name": "Headset",
+        "price": "100",
+        "description": "Headset for mobile phone",
+        "image": "some_image_url.png",
+        "id": "5"
+    },
+    {
+        "name": "Headset",
+        "price": "100",
+        "description": "Headset for mobile phone",
+        "image": "some_image_url.png",
+        "id": "6"
+    },
+    {
+        "name": "Headset",
+        "price": "100",
+        "description": "Headset for mobile phone",
+        "image": "some_image_url.png",
+        "id": "7"
     }
 ]

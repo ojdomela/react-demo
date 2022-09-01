@@ -1,10 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import studentReducer from "./studentReducer";
+import displayReducer from "./displayReducer";
 
 const store = configureStore({
     reducer: {
-        // cart: cartReducer,
-        student: studentReducer
+        display: displayReducer,
     },
 });
 

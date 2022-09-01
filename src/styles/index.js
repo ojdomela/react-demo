@@ -17,8 +17,9 @@ export default createGlobalStyle`
         padding-top: 5rem;
         background-color: ${colors.background};
         color: ${colors.secondary};
-        min-height: 100vh;
+        min-height: 200vh;
         position: relative;
+        ${props => props.modal ? "overflow: hidden;" : ""}
     }
 
     html {
