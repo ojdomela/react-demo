@@ -51,7 +51,7 @@ export function SignUp({ setShowSignUp }) {
 
     const handleSignUp = (e) => {
         e.preventDefault();
-        if (details.password != details.confirm_password) throw new Error('Passwords do not match')
+        if (details.password !== details.confirm_password) throw new Error('Passwords do not match')
         createNewAccount(details.username, details.email, details.password)
     }
 

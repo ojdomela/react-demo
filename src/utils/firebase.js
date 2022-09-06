@@ -13,9 +13,7 @@ const firebaseConfig = {
 
 
 const app = initializeApp(firebaseConfig);
-// const db = getFirestore(app);
 const auth = getAuth(app);
-console.log(auth)
 
 onAuthStateChanged(auth, (user) => {
     console.log(auth)
@@ -32,6 +30,7 @@ export const loginToAccount = async (email, password) => {
         const userCredential = await signInWithEmailAndPassword(auth, email, password)
         console.log(userCredential);
     } catch (error) {
+        // error handling?
         console.log(error);
     }
 }
@@ -43,8 +42,8 @@ export const createNewAccount = async (username, email, password) => {
     try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password)
         console.log(userCredential);
-        // set username if exists
     } catch (error) {
+        // error handling?
         console.log(error.code);
         console.log(error.message);
     }
@@ -53,16 +52,3 @@ export const createNewAccount = async (username, email, password) => {
 export const logout = () => {
     signOut(auth)
 }
-
-// const postComment = async (comment) => {
-//     const comments = collection('comments');
-//     await comments.add(comment);
-//     try {
-//         const result = await comments.doc(comment.id).set(comment);
-//         console.log(result);
-//         return [result, null];
-//     } catch (error) {
-//         console.log(error);
-//         return [null, error];
-//     }
-// };
